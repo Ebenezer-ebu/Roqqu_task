@@ -1,0 +1,46 @@
+.box {
+  width: 90%;
+  background: transparent linear-gradient(102deg, #2733c4 0%, #9f19d1 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 16px;
+  opacity: 1;
+  display: flex;
+  padding: 30px;
+}
+
+.day {
+  font-size: 14px;
+}
+
+.desc {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.desc2 {
+  letter-spacing: -0.32px;
+  font-weight: 200;
+}
+
+.btn2 {
+  display: flex;
+  justify-content: space-between;
+  background: #030303 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border: none;
+  color: #ffffff;
+  padding: 15px 45px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.arrow-right {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1050px) {
+  .box > img {
+    display: none;
+  }
+}

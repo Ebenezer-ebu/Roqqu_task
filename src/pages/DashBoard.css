@@ -1,0 +1,22 @@
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #fff;
+}
+
+.right {
+  background: #080f24 0% 0% no-repeat padding-box;
+  padding: 15px;
+  width: 25%;
+}
+
+@media screen and (max-width: 1000px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .right {
+    margin-top: 20px;
+    width: 90%;
+  }
+}

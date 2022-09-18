@@ -1,0 +1,103 @@
+.balance {
+  padding: 30px;
+  background: #04091c;
+  border-radius: 5px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance > p {
+  font-size: 12px;
+}
+
+.btc {
+  font-size: 14px;
+  background: #d17300;
+  width: 58px;
+  padding: 5px;
+  border-radius: 18px;
+  opacity: 1;
+  text-align: center;
+}
+
+.float {
+  font-size: 30px;
+  margin: 0;
+}
+
+.amount {
+  color: #1ac9a0;
+  opacity: 1;
+}
+
+.btn {
+  background: #0165ff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.head {
+  margin-top: 45px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  background: #04091c;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.icon2 {
+  background: #4848483c;
+  padding: 10px;
+  border-radius: 50%;
+  color: #bfc6de91;
+  margin: 5px;
+}
+
+.with {
+  font-size: 14px;
+  color: #ffffffe8;
+  margin: 5px;
+}
+
+.com {
+  color: #13a583;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.price {
+  color: #bfc6decb;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.date {
+  color: #bfc6decb;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.icon3 {
+  padding: 10px;
+  border-radius: 50%;
+  color: #bfc6de91;
+  margin: 10px 0;
+}

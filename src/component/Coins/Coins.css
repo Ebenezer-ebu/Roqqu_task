@@ -1,0 +1,63 @@
+.coins-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+  row-gap: 15px;
+  width: 85%;
+}
+
+.card {
+  background: #080f24 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left {
+  display: flex;
+  width: 50%;
+}
+
+.image {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.coin {
+  font-weight: bold;
+}
+
+.term {
+  font-size: 14px;
+}
+
+.percent {
+  color: #1ac9a0;
+  font-size: 12px;
+}
+
+.cash {
+  font-weight: bold;
+}
+
+.right-tap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 1000px) {
+  .coins-grid {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .coins-grid {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+}

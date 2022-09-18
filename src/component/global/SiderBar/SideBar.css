@@ -1,0 +1,41 @@
+.pad {
+  position: fixed;
+  z-index: 10;
+}
+
+.sidebar_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 18px;
+  color: #91a0ced8;
+  background: #080f24 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 100vh;
+  font-family: "Mulish", sans-serif;
+  position: absolute;
+}
+
+.list-group {
+  margin: 10px 0;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.text {
+  display: none;
+  margin-left: 40px;
+  margin-right: 30px;
+}
+
+.sidebar_nav:hover > .list-group > .text {
+  display: block;
+}
+
+.active {
+  background: #0e152b;
+  border-radius: 5px;
+}

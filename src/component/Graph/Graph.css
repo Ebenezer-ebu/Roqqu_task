@@ -1,0 +1,69 @@
+.graph-container {
+  width: 95%;
+  height: 486px;
+  /* UI Properties */
+  background: #080f24 0% 0% no-repeat padding-box;
+  border-radius: 10px 10px 0px 0px;
+  opacity: 1;
+  padding: 10px 15px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  font-size: 14px;
+  font-weight: 200px;
+}
+
+.price-tag {
+  background: #051954;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.price-tag2 {
+  padding: 10px;
+  color: #ffffffb9;
+}
+
+.next {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.next-left {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.next-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+}
+
+.para {
+  padding: 10px 15px;
+  align-self: center;
+  background: #0e152b;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.para2 {
+  padding: 5px;
+  align-self: center;
+  border-radius: 5px;
+}

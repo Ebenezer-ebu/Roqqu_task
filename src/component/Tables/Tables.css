@@ -1,0 +1,77 @@
+.order-container {
+  background: #080f24;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.placeorder {
+  background: #080f24;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.market {
+  background: #080f24;
+  margin-top: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.table-content {
+  background: #04091c;
+  font-size: 12px;
+  width: 100%;
+  padding: 10px 0;
+}
+.table-content2 {
+  background: #04091c;
+  font-size: 12px;
+  width: 100%;
+  padding: 10px 0;
+  table-layout: fixed;
+  height: 200px;
+}
+
+h4 {
+  margin-left: 15px;
+  color: #ffffffe8;
+}
+
+.tag {
+  background: #04091c;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.head2 {
+  color: #e4e4fa91;
+  text-align: left;
+  padding: 10px;
+}
+
+.stick-head {
+  position: sticky;
+}
+
+.red {
+  color: #ff8686;
+}
+
+td {
+  padding: 8px;
+}
+
+.green2 {
+  color: #13a583;
+}
+
+.next-head {
+  text-align: center;
+  padding: 15px;
+  border-top: 0.05px solid #72727591;
+  border-bottom: 0.05px solid #72727591;
+}
