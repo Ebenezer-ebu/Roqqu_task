@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { createChart, CrosshairMode } from "lightweight-charts";
 import { getPreviousKlines } from "../../utils/api";
 import "./Chart.css";

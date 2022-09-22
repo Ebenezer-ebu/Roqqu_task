@@ -35,6 +35,7 @@ export const OrderBook = () => {
     };
     orderBooks();
   }, []);
+  console.log(orderBook);
   return (
     <div className="order-container">
       <h4>Order Book</h4>
@@ -50,7 +51,26 @@ export const OrderBook = () => {
         <tbody>
           {orderBook.asks.map((item, i) => (
             <tr key={i}>
-              <td className="red">{item[0]}</td>
+              <td className="red">
+                <div
+                  style={{
+                    position: "relative",
+                    padding: "8px",
+                  }}
+                >
+                  {item[0]}
+                  <span
+                    style={{
+                      background: "#F07A642F",
+                      position: "absolute",
+                      width: `${item[3] * 10000}%`,
+                      height: "33px",
+                      left: 0,
+                      top: 0,
+                    }}
+                  ></span>
+                </div>
+              </td>
               <td>{item[1]}</td>
               <td>{item[2].toFixed(6)}</td>
             </tr>
@@ -62,7 +82,27 @@ export const OrderBook = () => {
           </tr>
           {orderBook.bids.map((item, i) => (
             <tr key={i}>
-              <td className="green2">{item[0]}</td>
+              <td className="green2">
+                {" "}
+                <div
+                  style={{
+                    position: "relative",
+                    padding: "8px",
+                  }}
+                >
+                  {item[0]}
+                  <span
+                    style={{
+                      background: "#13A5831C",
+                      position: "absolute",
+                      width: `${item[3] * 10000}%`,
+                      height: "33px",
+                      left: 0,
+                      top: 0,
+                    }}
+                  ></span>
+                </div>
+              </td>
               <td>{item[1]}</td>
               <td>{item[2].toFixed(6)}</td>
             </tr>
