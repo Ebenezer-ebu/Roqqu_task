@@ -1,7 +1,40 @@
-import { order, market } from "../../utils/table_details";
+import { useState, useEffect } from "react";
+import {
+  market,
+  addTotalSums,
+  getMaxTotalSum,
+  addDepths,
+} from "../../utils/table_details";
+import { getOrdersBook } from "../../utils/api";
 import "./Tables.css";
-
 export const OrderBook = () => {
+  const [orderBook, setOrderBook] = useState({
+    rawBids: [],
+    bids: [],
+    maxTotalBids: 0,
+    rawAsks: [],
+    asks: [],
+    maxTotalAsks: 0,
+  });
+  useEffect(() => {
+    const orderBooks = async () => {
+      const orBook = await getOrdersBook();
+      let bids = addTotalSums(orBook.bids).sort((a, b) => b[0] - a[0]);
+      let asks = addTotalSums(orBook.asks).sort((a, b) => b[0] - a[0]);
+      const maxTotalBids = getMaxTotalSum(bids);
+      const maxTotalAsks = getMaxTotalSum(asks);
+      bids = addDepths(bids, maxTotalBids);
+      asks = addDepths(asks, maxTotalAsks);
+      setOrderBook((prev) => ({
+        ...prev,
+        bids,
+        asks,
+        maxTotalBids,
+        maxTotalAsks,
+      }));
+    };
+    orderBooks();
+  }, []);
   return (
     <div className="order-container">
       <h4>Order Book</h4>
@@ -15,23 +48,23 @@ export const OrderBook = () => {
           </tr>
         </thead>
         <tbody>
-          {order.map((item, i) => (
+          {orderBook.asks.map((item, i) => (
             <tr key={i}>
-              <td className="red">{item.price}</td>
-              <td>{item.amount}</td>
-              <td>{item.total}</td>
+              <td className="red">{item[0]}</td>
+              <td>{item[1]}</td>
+              <td>{item[2].toFixed(6)}</td>
             </tr>
           ))}
           <tr>
             <th colSpan="3" scope="colgroup" className="next-head">
-              128299.304781 USDT
+              {`${orderBook.maxTotalBids} USDT`}
             </th>
           </tr>
-          {order.map((item, i) => (
+          {orderBook.bids.map((item, i) => (
             <tr key={i}>
-              <td className="green2">{item.price}</td>
-              <td>{item.amount}</td>
-              <td>{item.total}</td>
+              <td className="green2">{item[0]}</td>
+              <td>{item[1]}</td>
+              <td>{item[2].toFixed(6)}</td>
             </tr>
           ))}
         </tbody>
@@ -39,7 +72,6 @@ export const OrderBook = () => {
     </div>
   );
 };
-
 export const PlaceOrder = () => {
   return (
     <div className="placeorder">
@@ -50,7 +82,6 @@ export const PlaceOrder = () => {
     </div>
   );
 };
-
 export const MarkeTrades = () => {
   return (
     <div className="market">
